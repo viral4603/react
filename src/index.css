@@ -1,0 +1,13 @@
+/* import base element style form tailwind */
+@tailwind base;
+/* import component style form tailwind */
+@tailwind components;
+/* import utilities style form tailwind */
+@tailwind utilities;
+
+@layer components {
+    .btn {
+      @apply px-4 py-2 border rounded font-bold
+    }
+}
+
