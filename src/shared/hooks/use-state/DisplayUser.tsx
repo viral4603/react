@@ -1,6 +1,6 @@
 import { useState } from "react"
 // ------------------------------------------- //
-import User from "./model/hooks.model"
+import User from "../model/hooks.model"
 
 const userList: User[] = [
     {
@@ -39,14 +39,16 @@ function DisplayUser() {
     const handleRenameActiveUser = () => {
         setActiveUser({ ...activeUser, name: 'john' })
     }
-
+    
     /**
      * remove user from user list
      * @param id index of user that will be remove
-     */
-    const handleRemoveUser = (id: number) => {
-        const newUser = users.filter((_: User, index: number) => index !== id)
-        setUser(newUser) //trigger 1
+    */
+   const handleRemoveUser = (id: number) => {
+       const newUser = users.filter((_: User, index: number) => index !== id)
+           
+       setUser(newUser) //trigger 1
+       setActiveUser({ ...activeUser, name: 'john' }) //trigger 2
     }
 
     /**display list of users */
