@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 // ------------------------------------------------ //
 import createConnection from "./service/connection.service"
 import DisplayMessage from "./components/DisplayMessage"
 import User from "./components/User"
 import { Message } from "../../utilites/useEffetc.model"
+import { SeacrhContext } from "../../../../core/Providers/SearchProvider"
 
 function Chatbook() {
     /** declare state varible for messages */
     const [messages, setMessages] = useState<Message[]>([])
+
+    const seacrchTerm = useContext(SeacrhContext)
 
     // BAD CODE line 14,15
     // Create connection and connect it In rendering logic
@@ -67,6 +70,9 @@ function Chatbook() {
                 <div className="flex flex-col space-y-2">
                     {renderMessages}
                 </div>
+                <h3>
+                    {seacrchTerm}
+                </h3>
             </div>
             {/* user-input-start */}
             <div className="flex justify-between">

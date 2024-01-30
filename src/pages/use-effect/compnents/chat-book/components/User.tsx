@@ -10,6 +10,8 @@ function User({ user, handleSubmit }: { user: string, handleSubmit: any }) {
 
     /** submit message on chat */
     const submitUserMessage = (): void => {
+        if (!userInput) return;
+        
         handleSubmit({ user: user, text: userInput })
         setUserInput('')
     }
