@@ -5,9 +5,30 @@
 /* import utilities style form tailwind */
 @tailwind utilities;
 
-@layer components {
-    .btn {
-      @apply px-4 py-2 border rounded font-bold
-    }
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
 }
 
+@layer components {
+  .btn {
+    @apply px-4 py-2 border rounded font-bold
+  }
+
+  .link {
+    @apply px-3 py-2 w-full block font-bold text-white text-center cursor-pointer transition duration-500 ease-in hover:bg-primary hover:text-primary-dark hover:ease-in
+    
+  }
+  .link.active {
+    @apply bg-primary text-primary-dark
+  }
+  .sidebar {
+    @apply flex-[0_0_250px] bg-primary-dark p-3 text-white transition-all duration-500 ease-out 
+  }
+
+  .sidebar-closed  {
+    @apply flex-[0_0_50px] transition-all duration-500 ease-out
+  }
+}
