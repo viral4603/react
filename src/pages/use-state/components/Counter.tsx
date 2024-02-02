@@ -30,10 +30,10 @@ function Counter() {
     }
 
     return (
-        <div className="w-[20%] mx-auto mt-5">
-            <h2 className="font-bold text-2xl mb-5">Counter Update</h2>
+        <div className="w-[30%] mx-auto mt-5 bg-primary-dark p-4">
+            <h2 className="font-bold text-2xl mb-5 text-primary">Counter Update</h2>
 
-            <h6 className="mb-5 text-center text-xl font-bold">Count:{count}</h6>
+            <h6 className="mb-5 text-center text-xl font-bold text-secondary">Count : {count}</h6>
 
             <div className="flex justify-between pt-5">
                 <button className="btn bg-blue-400 hover:bg-blue-300" onClick={handleIncreseCount}>Increase</button>
