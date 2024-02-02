@@ -8,6 +8,7 @@ import Chatbook from './pages/use-effect/compnents/chat-book/ChatBook.tsx'
 import Counter from './pages/use-state/components/Counter.tsx'
 //------------------------------------------------------------------------//
 import './index.css'
+import PageNotFound from './core/ErrorPage/PageNotFound.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -18,13 +19,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
             <Route path='chatbook' element={<Chatbook />} />
             <Route path='counter' element={<Counter />} />
             <Route element={<Navigate to="/chatbook" />} />
-            <Route path="*" element={
-              <main style={{ padding: "1rem" }}>
-                <p>There's nothing here (404)!</p>
-              </main>
-            }
-            />
-            <Route index element={<Navigate to="/chatbook" />} />
+            <Route path="*" element={<PageNotFound />} />
+            <Route index element={<Navigate to="counter" />} />
           </Route>
         </Routes>
       </BrowserRouter>

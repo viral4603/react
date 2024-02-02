@@ -11,6 +11,10 @@ export default {
           DEFAULT: "#c6efe0",
           dark: "#181d1c"
         },
+        secondary: {
+          DEFAULT: "#e8fc67",
+          dark: "#141609"
+        }
       }
     },
   },
